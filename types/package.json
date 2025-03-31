@@ -1,0 +1,27 @@
+{
+  "name": "@store-locator-plus/types",
+  "version": "1.0.0",
+  "description": "Utility types for Store Locator Plus® Reactionary.",
+  "author": "Lance Cleveland",
+  "license": "LGPL-3.0",
+  "keywords": [
+    "react",
+    "react-component",
+    "reactionary",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Store-Locator-Plus/reactionary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Store-Locator-Plus/reactionary/issues"
+  },
+  "homepage": "https://github.com/Store-Locator-Plus/reactionary#readme",
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "front-end.d.ts",
+    "slpReact.d.ts"
+  ]
+}
