@@ -2,9 +2,14 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { AppBar, Button, ButtonGroup, IconButton, Toolbar, Tooltip, Typography } from "@mui/material";
 import { MenuBook } from "@mui/icons-material";
 /**
- * The admin header react component.
- * @returns {JSX.Element}
- * @constructor
+ * Renders a customizable admin header component for displaying a sticky top navigation bar.
+ *
+ * @param {Object} props - The properties for the AdminHeader component.
+ * @param {string} [props.docLink=''] - The specific documentation link path that is appended to the base documentation URL.
+ * @param {string} [props.docURL='https://docs.storelocatorplus.com'] - The base URL for the documentation site.
+ * @param {Array} [props.mainButtons=[]] - An array of main button elements that are rendered as part of the button group.
+ * @param {string} [props.pageName=''] - The name of the current page, displayed prominently in the toolbar.
+ * @returns {JSX.Element} - The rendered JSX element representing the admin header.
  */
 const AdminHeader = ({ docLink = '', docURL = 'https://docs.storelocatorplus.com', mainButtons = [], pageName = '' }) => {
     const documentationLink = `${docURL}${docLink}`;
