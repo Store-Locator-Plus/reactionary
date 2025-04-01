@@ -1,12 +1,12 @@
 {
   "name": "@store-locator-plus/reactionary",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A library of types and React components for Store Locator Plus®.",
   "author": "Lance Cleveland",
   "license": "LGPL-3.0-or-later",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
+    "prepare": "npm run build"
   },
   "keywords": [
     "react",
@@ -23,16 +23,16 @@
   },
   "homepage": "https://github.com/Store-Locator-Plus/reactionary#readme",
   "types": "types/index.d.ts",
+  "main": "dist/index.js",
+  "exports": {
+    "./admin": "./dist/admin/index.js"
+  },
   "files": [
     "dist",
     "types",
     "README.md",
     "LICENSE"
   ],
-  "exports": {
-    "./admin": "./dist/admin/index.js"
-  },
-  "main": "dist/index.js",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
