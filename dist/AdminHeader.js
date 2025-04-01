@@ -1,4 +1,4 @@
-import React from 'react';
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { AppBar, Button, ButtonGroup, IconButton, Toolbar, Tooltip, Typography } from "@mui/material";
 import { MenuBook } from "@mui/icons-material";
 /**
@@ -10,15 +10,9 @@ const AdminHeader = ({ docLink = '', docURL = 'https://docs.storelocatorplus.com
     const documentationLink = `${docURL}${docLink}`;
     let mainButtonGroup = null;
     if (mainButtons && mainButtons.length) {
-        mainButtonGroup = (React.createElement(ButtonGroup, { variant: "text", size: "small", color: "inherit" }, mainButtons.map((button => (React.createElement(Button, Object.assign({}, button.props), button.children))))));
+        mainButtonGroup = (_jsx(ButtonGroup, { variant: "text", size: "small", color: "inherit", children: mainButtons.map((button => (_jsx(Button, Object.assign({}, button.props, { children: button.children }))))) }));
     }
-    return (React.createElement(AppBar, { position: "sticky" },
-        React.createElement(Toolbar, null,
-            React.createElement(Typography, { variant: "h6", component: "div", sx: { flexGrow: 1 } }, pageName),
-            mainButtonGroup,
-            React.createElement(Tooltip, { title: "Documentation" },
-                React.createElement(IconButton, { color: "inherit", size: "medium", key: "slp_docs", href: documentationLink, target: "_blank", "aria-label": "Documentation" },
-                    React.createElement(MenuBook, null))))));
+    return (_jsx(AppBar, { position: "sticky", children: _jsxs(Toolbar, { children: [_jsx(Typography, { variant: "h6", component: "div", sx: { flexGrow: 1 }, children: pageName }), mainButtonGroup, _jsx(Tooltip, { title: "Documentation", children: _jsx(IconButton, { color: "inherit", size: "medium", href: documentationLink, target: "_blank", "aria-label": "Documentation", children: _jsx(MenuBook, {}) }, "slp_docs") })] }) }));
 };
 export default AdminHeader;
 //# sourceMappingURL=AdminHeader.js.map
