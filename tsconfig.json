@@ -11,9 +11,10 @@
        "moduleResolution": "node",
        "outDir": "./dist",
        "declaration": true,
-       "declarationDir": "./types",
+       "declarationDir": "./types/generated",
        "declarationMap": true,
        "sourceMap": true
      },
-     "include": ["src/**/*", "types/**/*"]
+     "include": ["src/**/*", "types/**/*"],
+     "exclude": ["src/index.ts"]
    }
