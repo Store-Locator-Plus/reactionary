@@ -38,5 +38,9 @@ declare global {
         url: url;
     }
 
+    interface Window {
+        slpReact: SLPReact;
+    }
+
     const slpReact: SLPReact; // Declare global variable
 }
