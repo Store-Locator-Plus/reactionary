@@ -1,0 +1,19 @@
+   {
+     "compilerOptions": {
+       "baseUrl": ".",
+       "target": "ES2017",
+       "module": "ESNext",
+       "jsx": "react",
+       "strict": true,
+       "esModuleInterop": true,
+       "skipLibCheck": true,
+       "resolveJsonModule": true,
+       "moduleResolution": "node",
+       "outDir": "./dist",
+       "declaration": true,
+       "declarationDir": "./types",
+       "declarationMap": true,
+       "sourceMap": true
+     },
+     "include": ["src/**/*", "types/**/*"]
+   }

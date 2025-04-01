@@ -1,2 +1,2 @@
-import './slpReact.d.ts';
-import './front-end.d.ts';
+export { default as AdminHeader } from './AdminHeader';
+//# sourceMappingURL=index.d.ts.map
