@@ -5,8 +5,7 @@
   "author": "Lance Cleveland",
   "license": "LGPL-3.0-or-later",
   "scripts": {
-    "build": "tsc",
-    "prepare": "npm run build"
+    "build": "tsc"
   },
   "keywords": [
     "react",
