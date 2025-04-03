@@ -1,6 +1,14 @@
 export {}; // Ensures this is treated as a module.
 
 declare global {
+    interface REST_Endpoints {
+        settings_history: string;
+    }
+
+    interface REST {
+        endpoint: REST_Endpoints
+    }
+
     interface mySLP {
         api_key: string;
         div_id: string;
@@ -13,6 +21,7 @@ declare global {
         map_views_over_limit: boolean;
         map_views_over_message: string;
         presentation: string;
+        REST: REST;
         rest_path: string;
         site_url: string;
         version: string;
