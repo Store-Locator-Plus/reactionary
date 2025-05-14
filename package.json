@@ -1,6 +1,6 @@
 {
   "name": "@store-locator-plus/reactionary",
-  "version": "2505.14.01",
+  "version": "1.0.15",
   "description": "A library of types and React components for Store Locator Plus®.",
   "author": "Lance Cleveland",
   "license": "LGPL-3.0-or-later",
