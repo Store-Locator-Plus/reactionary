@@ -16,6 +16,7 @@ declare global {
         location_count: bigint;
         location_limit: bigint;
         map_views: bigint;
+        map_views_charge: number;
         map_views_limit: bigint;
         map_views_overage: bigint;
         map_views_over_limit: boolean;
