@@ -2,6 +2,7 @@ export {}; // Ensures this is treated as a module.
 
 declare global {
     interface REST_Endpoints {
+        invoices: string;
         settings_history: string;
     }
 
