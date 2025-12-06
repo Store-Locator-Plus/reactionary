@@ -26,6 +26,7 @@ declare global {
         REST: REST;
         rest_path: string;
         site_url: string;
+        sites: string[];
         version: string;
     }
 
