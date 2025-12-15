@@ -4,6 +4,8 @@ declare global {
     interface REST_Endpoints {
         invoices: string;
         settings_history: string;
+        /** Customer profile history endpoint (optional) */
+        history?: string;
     }
 
     interface REST {
@@ -14,6 +16,8 @@ declare global {
         api_key: string;
         div_id: string;
         embed_script: string;
+        /** Blog ID used for scoping certain requests (optional) */
+        blog_id?: number;
         location_count: bigint;
         location_limit: bigint;
         map_views: bigint;
