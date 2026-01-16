@@ -24,6 +24,7 @@ declare global {
         map_views_charge: number;
         map_views_charge_message: string;
         map_views_limit: bigint;
+        map_views_message: string;
         map_views_overage: bigint;
         map_views_over_limit: boolean;
         map_views_over_message: string;
