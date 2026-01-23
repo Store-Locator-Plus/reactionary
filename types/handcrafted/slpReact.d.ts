@@ -34,6 +34,59 @@ declare global {
         site_url: string;
         sites: string[];
         version: string;
+        subscription: Subscription;
+    }
+
+    interface Plan {
+        name: string;
+        price: string;
+        period: string;
+        max_locations: number;
+        max_views: number;
+        is_selected: boolean;
+        up_or_down: string;
+        status_label: string;
+        renew_text: string;
+    }
+
+    interface StripeData {
+        public_key?: string;
+        form_label?: string;
+        button_label?: string;
+    }
+
+    interface SubscriptionNonces {
+        recurring_payments: string;
+        recurring_payments_cancel: string;
+        switch_to_stripe: string;
+    }
+
+    interface Subscription {
+        account_is_valid: boolean;
+        might_have_subscription: boolean;
+        current_subscription: any;
+        using_stripe?: boolean;
+        payment_processor?: string;
+        days_left?: number;
+        days_left_label?: string;
+        status?: string;
+        plan_description?: string;
+        expiration_date?: string;
+        is_cancelled?: boolean;
+        amt?: string | number;
+        currency?: string;
+        canceled_at?: number | string;
+        canceled_at_formatted?: string;
+        coupon?: string;
+        card_info?: string;
+        coupon_code?: string;
+        coupon_details?: string;
+        stripe_data?: StripeData;
+        user_id?: number;
+        payment_profile_id?: string;
+        user_email?: string;
+        plans?: Plan[];
+        nonces?: SubscriptionNonces;
     }
 
     interface SLP {
