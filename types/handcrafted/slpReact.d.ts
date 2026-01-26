@@ -55,6 +55,26 @@ declare global {
         button_label?: string;
     }
 
+    /*
+        AMT - amount as an int 55 = $55.00
+        PROFILEID - the subscription id
+     */
+    interface SubscriptionMeta {
+        AMT: bigint;
+        DESC: string;
+        IS_GOOD: boolean;
+        LASTPAYMENTAMT: bigint;
+        LASTPAYMENTDATE: string;
+        NEXTBILLINGDATE: string;
+        PERIOD: string;
+        PLAN: string;
+        PROCESSOR: string;
+        PROFILEID: string;
+        PROFILESTARTDATE: string;
+        STATUS: string;
+        subscription_details: any;
+    }
+
     interface SubscriptionNonces {
         recurring_payments: string;
         recurring_payments_cancel: string;
@@ -64,7 +84,7 @@ declare global {
     interface Subscription {
         account_is_valid: boolean;
         might_have_subscription: boolean;
-        current_subscription: any;
+        current_subscription: SubscriptionMeta;
         using_stripe?: boolean;
         payment_processor?: string;
         days_left?: number;
