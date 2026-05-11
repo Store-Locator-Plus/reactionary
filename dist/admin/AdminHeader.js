@@ -15,7 +15,10 @@ const AdminHeader = ({ docLink = '', docURL = 'https://docs.storelocatorplus.com
     const documentationLink = `${docURL}${docLink}`;
     let mainButtonGroup = null;
     if (mainButtons && mainButtons.length) {
-        mainButtonGroup = (_jsx(ButtonGroup, { variant: "text", size: "small", color: "inherit", children: mainButtons.map((button => (_jsx(Button, Object.assign({}, button.props, { children: button.children }))))) }));
+        mainButtonGroup = (_jsx(ButtonGroup, { variant: "text", size: "small", color: "inherit", children: mainButtons.map((button, index) => {
+                var _a, _b;
+                return (_jsx(Button, Object.assign({}, button.props, { children: button.children }), (_b = (_a = button.props.key) !== null && _a !== void 0 ? _a : button.props.id) !== null && _b !== void 0 ? _b : index));
+            }) }));
     }
     return (_jsx(AppBar, { position: "sticky", children: _jsxs(Toolbar, { children: [_jsx(Typography, { variant: "h6", component: "div", sx: { flexGrow: 1 }, children: pageName }), mainButtonGroup, _jsx(Tooltip, { title: "Documentation", children: _jsx(IconButton, { color: "inherit", size: "medium", href: documentationLink, target: "_blank", "aria-label": "Documentation", children: _jsx(MenuBook, {}) }, "slp_docs") })] }) }));
 };

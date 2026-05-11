@@ -62,7 +62,14 @@ const AdminHeader = (
     if (mainButtons && mainButtons.length) {
         mainButtonGroup = (
             <ButtonGroup variant="text" size="small" color="inherit">
-                {mainButtons.map((button => (<Button {...button.props}>{button.children}</Button>)))}
+                {mainButtons.map((button, index) => (
+                    <Button
+                        key={button.props.key ?? button.props.id ?? index}
+                        {...button.props}
+                    >
+                        {button.children}
+                    </Button>
+                ))}
             </ButtonGroup>
         );
     }
