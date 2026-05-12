@@ -17,6 +17,9 @@ const SLPGlobalStyles = () => (_jsx(GlobalStyles, { styles: {
         '.MuiAccordionSummary-root:hover': {
             backgroundColor: 'gray',
         },
+        '.MuiToolbar-root': {
+            minHeight: 'inherit',
+        }
     } }));
 export default SLPGlobalStyles;
 //# sourceMappingURL=SLPGlobalStyles.js.map

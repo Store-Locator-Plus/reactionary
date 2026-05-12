@@ -20,6 +20,9 @@ const SLPGlobalStyles: React.FC = () => (
             '.MuiAccordionSummary-root:hover': {
                 backgroundColor: 'gray',
             },
+            '.MuiToolbar-root': {
+                minHeight: 'inherit',
+            }
         }}
     />
 );
