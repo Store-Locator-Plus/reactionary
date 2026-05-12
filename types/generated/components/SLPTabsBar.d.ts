@@ -5,6 +5,7 @@ import type { SxProps, Theme } from '@mui/material/styles';
  */
 export declare const SLP_TAB_SX: {
     readonly '& .MuiTab-root': {
+        readonly color: "black";
         readonly textTransform: "none";
         readonly fontWeight: "medium";
         readonly fontSize: "1rem";
@@ -21,5 +22,5 @@ type SLPTabsBarProps = {
     className?: string;
 };
 export declare const SLPTabsBar: React.FC<SLPTabsBarProps>;
-export {};
+export default SLPTabsBar;
 //# sourceMappingURL=SLPTabsBar.d.ts.map

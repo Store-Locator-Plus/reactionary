@@ -1,13 +1,14 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import type { SxProps, Theme } from '@mui/material/styles';
+import SLPGlobalStyles from "./SLPGlobalStyles";
 
 /**
  * Standard tab styling constant for SLP admin pages.
  */
 export const SLP_TAB_SX = {
     '& .MuiTab-root': {
-        color: '#444444' as const,
+        color: 'black',
         textTransform: 'none' as const,
         fontWeight: 'medium' as const,
         fontSize: '1rem',
@@ -30,3 +31,5 @@ export const SLPTabsBar: React.FC<SLPTabsBarProps> = ({ children, sx = {}, id, c
         {children}
     </Box>
 );
+
+export default SLPTabsBar;
