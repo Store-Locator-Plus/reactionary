@@ -7,6 +7,7 @@ import type { SxProps, Theme } from '@mui/material/styles';
  */
 export const SLP_TAB_SX = {
     '& .MuiTab-root': {
+        color: '#444444' as const,
         textTransform: 'none' as const,
         fontWeight: 'medium' as const,
         fontSize: '1rem',
