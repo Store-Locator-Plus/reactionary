@@ -1,6 +1,8 @@
-import React, {JSX} from 'react';
-import {AppBar, Button, ButtonGroup, IconButton, Toolbar, Tooltip, Typography} from "@mui/material";
+import React, {JSX, useState} from 'react';
+import {AppBar, Button, ButtonGroup, IconButton, Tab, Tabs, Toolbar, Tooltip, Typography} from "@mui/material";
 import {MenuBook} from "@mui/icons-material";
+import {SLP_TAB_SX, SLPTabsBar} from "../SLPTabsBar";
+import SLPGlobalStyles from "../SLPGlobalStyles";
 
 /**
  * Represents a main button component with assigned properties and children.
@@ -15,9 +17,17 @@ import {MenuBook} from "@mui/icons-material";
  *   the base `Button` component.
  * - `children`: The React children nodes to be rendered inside the button.
  */
-type MainButton = {
+export type MainButton = {
     props: React.ComponentProps<typeof Button>;
     children: React.ReactNode;
+};
+
+/**
+ * Represents a navigation section in the admin header.
+ */
+export type AdminSection = {
+    link_id: string;
+    name: string;
 };
 
 /**
@@ -31,12 +41,18 @@ type MainButton = {
  * - `docURL` (optional): A string representing the URL for documentation.
  * - `mainButtons` (optional): An array of `MainButton` objects used for primary actions in the header.
  * - `pageName` (optional): A string indicating the name of the current page or section.
+ * - `saveText` (optional): The text for the save button. If provided, the save button will be shown.
+ * - `sections` (optional): An array of `AdminSection` objects for the navigation tabs.
+ * - `selectedNavElement` (optional): The ID of the currently selected navigation element.
  */
-type AdminHeaderProps = {
+export type AdminHeaderProps = {
     docLink?: string;
     docURL?: string;
     mainButtons?: MainButton[];
     pageName?: string;
+    saveText?: string;
+    sections?: AdminSection[];
+    selectedNavElement?: string;
 };
 
 /**
@@ -47,6 +63,9 @@ type AdminHeaderProps = {
  * @param {string} [props.docURL='https://docs.storelocatorplus.com'] - The base URL for the documentation site.
  * @param {Array} [props.mainButtons=[]] - An array of main button elements that are rendered as part of the button group.
  * @param {string} [props.pageName=''] - The name of the current page, displayed prominently in the toolbar.
+ * @param {string} [props.saveText=''] - The text for the save button.
+ * @param {Array} [props.sections=[]] - Navigation sections.
+ * @param {string} [props.selectedNavElement=''] - Initial selected navigation element.
  * @returns {JSX.Element} - The rendered JSX element representing the admin header.
  */
 const AdminHeader = (
@@ -54,9 +73,13 @@ const AdminHeader = (
         docLink = '',
         docURL = 'https://docs.storelocatorplus.com',
         mainButtons = [],
-        pageName = ''
+        pageName = '',
+        saveText = '',
+        sections = [],
+        selectedNavElement = ''
     }: AdminHeaderProps): JSX.Element => {
     const documentationLink = `${docURL}${docLink}`;
+    const [selectedNav, setSelectedNav] = useState(selectedNavElement || sections?.[0]?.link_id || '');
 
     let mainButtonGroup = null
     if (mainButtons && mainButtons.length) {
@@ -74,9 +97,33 @@ const AdminHeader = (
         );
     }
 
+    const handleTabChange = (event: React.SyntheticEvent, newNav: string) => {
+        const openElement = selectedNav ? document.getElementById(selectedNav) : null;
+        const newElement = newNav ? document.getElementById(newNav) : null;
+
+        if (openElement) {
+            openElement.style.display = 'none';
+        }
+
+        if (newElement) {
+            newElement.style.removeProperty('display');
+        }
+
+        setSelectedNav(newNav);
+    };
+
+    const handleSaveClick = () => {
+        const form = document.getElementById('slp_options_form') as HTMLFormElement;
+        if (!form) {
+            return;
+        }
+        form.submit();
+    }
+
     return (
         <AppBar position="sticky">
-            <Toolbar>
+            <SLPGlobalStyles />
+            <Toolbar sx={{minHeight: 'inherit'}}>
                 <Typography variant="h6" component="div"
                             sx={{flexGrow: 1}}>{pageName}</Typography>
                 {mainButtonGroup}
@@ -93,6 +140,27 @@ const AdminHeader = (
                     </IconButton>
                 </Tooltip>
             </Toolbar>
+            {sections.length > 0 && (
+                <SLPTabsBar sx={{px: 0, borderBottom: 0}}>
+                    <Tabs
+                        onChange={handleTabChange}
+                        value={selectedNav}
+                        sx={SLP_TAB_SX}
+                    >
+                        {sections.map((section) => (
+                            <Tab
+                                id={`${section.link_id}_sidemenu`}
+                                label={section.name}
+                                value={section.link_id}
+                                key={section.link_id}
+                            />
+                        ))}
+                        {!!saveText && (
+                            <Button variant="outlined" onClick={handleSaveClick}>{saveText}</Button>
+                        )}
+                    </Tabs>
+                </SLPTabsBar>
+            )}
         </AppBar>
     );
 }
