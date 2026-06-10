@@ -1,6 +1,7 @@
 import React from 'react';
 /**
- * Global styles specific to Custom Accordion components.
+ * Global styles for Store Locator Plus custom components.
+ * Uses Material UI CssBaseline to reset CSS.
  */
 declare const SLPGlobalStyles: React.FC;
 export default SLPGlobalStyles;
