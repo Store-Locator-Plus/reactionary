@@ -44,6 +44,7 @@ export type AdminHeaderProps = {
     docURL?: string;
     mainButtons?: MainButton[];
     pageName?: string;
+    onSectionChange?: (linkId: string) => void;
     saveText?: string;
     sections?: AdminSection[];
     selectedNavElement?: string;
@@ -56,11 +57,12 @@ export type AdminHeaderProps = {
  * @param {string} [props.docURL='https://docs.storelocatorplus.com'] - The base URL for the documentation site.
  * @param {Array} [props.mainButtons=[]] - An array of main button elements that are rendered as part of the button group.
  * @param {string} [props.pageName=''] - The name of the current page, displayed prominently in the toolbar.
+ * @param {Function} [props.onSectionChange] - Callback fired when a section tab is selected.
  * @param {string} [props.saveText=''] - The text for the save button.
  * @param {Array} [props.sections=[]] - Navigation sections.
  * @param {string} [props.selectedNavElement=''] - Initial selected navigation element.
  * @returns {JSX.Element} - The rendered JSX element representing the admin header.
  */
-declare const AdminHeader: ({ docLink, docURL, mainButtons, pageName, saveText, sections, selectedNavElement }: AdminHeaderProps) => JSX.Element;
+declare const AdminHeader: ({ docLink, docURL, mainButtons, pageName, onSectionChange, saveText, sections, selectedNavElement }: AdminHeaderProps) => JSX.Element;
 export default AdminHeader;
 //# sourceMappingURL=AdminHeader.d.ts.map

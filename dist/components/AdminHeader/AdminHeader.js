@@ -12,12 +12,13 @@ import SLPGlobalStyles from "../SLPGlobalStyles";
  * @param {string} [props.docURL='https://docs.storelocatorplus.com'] - The base URL for the documentation site.
  * @param {Array} [props.mainButtons=[]] - An array of main button elements that are rendered as part of the button group.
  * @param {string} [props.pageName=''] - The name of the current page, displayed prominently in the toolbar.
+ * @param {Function} [props.onSectionChange] - Callback fired when a section tab is selected.
  * @param {string} [props.saveText=''] - The text for the save button.
  * @param {Array} [props.sections=[]] - Navigation sections.
  * @param {string} [props.selectedNavElement=''] - Initial selected navigation element.
  * @returns {JSX.Element} - The rendered JSX element representing the admin header.
  */
-const AdminHeader = ({ docLink = '', docURL = 'https://docs.storelocatorplus.com', mainButtons = [], pageName = '', saveText = '', sections = [], selectedNavElement = '' }) => {
+const AdminHeader = ({ docLink = '', docURL = 'https://docs.storelocatorplus.com', mainButtons = [], pageName = '', onSectionChange, saveText = '', sections = [], selectedNavElement = '' }) => {
     var _a;
     const documentationLink = `${docURL}${docLink}`;
     const [selectedNav, setSelectedNav] = useState(selectedNavElement || ((_a = sections === null || sections === void 0 ? void 0 : sections[0]) === null || _a === void 0 ? void 0 : _a.link_id) || '');
@@ -38,6 +39,9 @@ const AdminHeader = ({ docLink = '', docURL = 'https://docs.storelocatorplus.com
             newElement.style.removeProperty('display');
         }
         setSelectedNav(newNav);
+        if (onSectionChange) {
+            onSectionChange(newNav);
+        }
     };
     const handleSaveClick = () => {
         const form = document.getElementById('slp_options_form');
