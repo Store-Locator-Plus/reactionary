@@ -26,7 +26,10 @@ const SLPGlobalStyles: React.FC = () => (
                 },
                 '.MuiToolbar-root': {
                     minHeight: 'inherit',
-                }
+                },
+                '.MuiDataGrid-columnHeader:focus, .MuiDataGrid-cell:focus': {
+                    outline: 'none',
+                },
             }}
         />
     </>

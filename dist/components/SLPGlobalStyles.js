@@ -21,7 +21,10 @@ const SLPGlobalStyles = () => (_jsxs(_Fragment, { children: [_jsx(CssBaseline, {
                 },
                 '.MuiToolbar-root': {
                     minHeight: 'inherit',
-                }
+                },
+                '.MuiDataGrid-columnHeader:focus, .MuiDataGrid-cell:focus': {
+                    outline: 'none',
+                },
             } })] }));
 export default SLPGlobalStyles;
 //# sourceMappingURL=SLPGlobalStyles.js.map
