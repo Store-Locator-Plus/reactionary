@@ -1,6 +1,11 @@
 export {}; // Ensures this is treated as a module.
 
 declare global {
+    interface AdminSection {
+        link_id: string;
+        name: string;
+    }
+
     interface REST_Endpoints {
         invoices: string;
         settings_history: string;
@@ -123,6 +128,7 @@ declare global {
     interface SLPReact {
         nonce: string;
         pageName: string;
+        sections?: AdminSection[];
         SLP: SLP;
         mySLP: mySLP;
         scriptHandle: string;
