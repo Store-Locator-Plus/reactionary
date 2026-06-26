@@ -1,9 +1,19 @@
+import type { ButtonProps } from '@mui/material/Button';
+import type React from 'react';
+
 export {}; // Ensures this is treated as a module.
 
 declare global {
     interface AdminSection {
         link_id: string;
         name: string;
+    }
+
+    interface MainButton {
+        props: ButtonProps & {
+            key?: React.Key;
+        };
+        children: React.ReactNode;
     }
 
     interface REST_Endpoints {
@@ -128,6 +138,7 @@ declare global {
     interface SLPReact {
         nonce: string;
         pageName: string;
+        mainButtons?: MainButton[];
         sections?: AdminSection[];
         SLP: SLP;
         mySLP: mySLP;
