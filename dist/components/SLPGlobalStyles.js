@@ -26,6 +26,16 @@ const SLPGlobalStyles = () => (_jsxs(_Fragment, { children: [_jsx(CssBaseline, {
                     outline: 'none !important',
                     boxShadow: 'none !important',
                 },
+                '.react-wrapper .MuiButton-root.MuiButton-contained:not(.Mui-disabled)': {
+                    color: 'var(--variant-containedColor, #fff)',
+                },
+                '.react-wrapper .MuiButton-root.MuiButton-containedSecondary:not(.Mui-disabled)': {
+                    backgroundColor: '#ed6c02',
+                    color: '#fff',
+                },
+                '.react-wrapper .MuiButton-root.MuiButton-containedSecondary:not(.Mui-disabled):hover': {
+                    backgroundColor: '#e65100',
+                },
             } })] }));
 export default SLPGlobalStyles;
 //# sourceMappingURL=SLPGlobalStyles.js.map

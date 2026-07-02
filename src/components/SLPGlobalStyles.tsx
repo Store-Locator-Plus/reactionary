@@ -31,6 +31,16 @@ const SLPGlobalStyles: React.FC = () => (
                     outline: 'none !important',
                     boxShadow: 'none !important',
                 },
+                '.react-wrapper .MuiButton-root.MuiButton-contained:not(.Mui-disabled)': {
+                    color: 'var(--variant-containedColor, #fff)',
+                },
+                '.react-wrapper .MuiButton-root.MuiButton-containedSecondary:not(.Mui-disabled)': {
+                    backgroundColor: '#ed6c02',
+                    color: '#fff',
+                },
+                '.react-wrapper .MuiButton-root.MuiButton-containedSecondary:not(.Mui-disabled):hover': {
+                    backgroundColor: '#e65100',
+                },
             }}
         />
     </>
