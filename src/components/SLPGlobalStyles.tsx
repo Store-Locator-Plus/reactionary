@@ -59,6 +59,12 @@ const SLPGlobalStyles: React.FC = () => (
                     boxSizing: 'border-box',
                     minHeight: '56px',
                 },
+                '.react-wrapper .MuiOutlinedInput-root .MuiOutlinedInput-input': {
+                    border: '0 !important',
+                    borderRadius: 0,
+                    boxShadow: 'none !important',
+                    outline: 'none',
+                },
                 '.react-wrapper .MuiOutlinedInput-root:not(.MuiInputBase-multiline) .MuiOutlinedInput-input': {
                     boxSizing: 'content-box',
                     height: '1.4375em',
