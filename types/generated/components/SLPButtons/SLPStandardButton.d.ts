@@ -2,7 +2,7 @@ import React from 'react';
 import { type ButtonProps } from '@mui/material/Button';
 import type { SxProps, Theme } from '@mui/material/styles';
 export type SLPButtonStyle = 'full' | 'icon';
-export type SLPStandardButtonProps = Omit<ButtonProps, 'children' | 'color' | 'endIcon' | 'startIcon' | 'style' | 'sx' | 'variant'> & {
+export type SLPStandardButtonProps = Omit<ButtonProps, 'endIcon' | 'startIcon' | 'style' | 'sx' | 'variant'> & {
     /** Full shows the icon and label; icon shows only the icon. */
     style?: SLPButtonStyle;
     label: string;
