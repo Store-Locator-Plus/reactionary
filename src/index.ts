@@ -10,6 +10,7 @@ export {
     SLPDeleteButton,
     SLPFilterButton,
 } from './components/SLPButtons';
+export { SLPThemeProvider } from './components/SLPTheme';
 export type {
     SLPButtonStyle,
     SLPStandardButtonProps,
