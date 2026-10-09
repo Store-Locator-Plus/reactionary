@@ -21,9 +21,9 @@ export type SLPStandardButtonProps = Omit<
 
 const secondaryContainedSx: SystemStyleObject<Theme> = {
     color: '#fff',
-    backgroundColor: '#ed6c02',
+    backgroundColor: '#ED6D03',
     '&:hover': {
-        backgroundColor: '#e65100',
+        backgroundColor: '#d45903',
     },
 };
 

@@ -14,9 +14,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 const secondaryContainedSx = {
     color: '#fff',
-    backgroundColor: '#ed6c02',
+    backgroundColor: '#ED6D03',
     '&:hover': {
-        backgroundColor: '#e65100',
+        backgroundColor: '#d45903',
     },
 };
 /** A consistently styled contained action button for Store Locator Plus interfaces. */
