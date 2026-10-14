@@ -30,7 +30,13 @@ export const SLPStandardButton = (_a) => {
             ? [sx]
             : [];
     const buttonSx = [
-        { whiteSpace: 'nowrap' },
+        {
+            whiteSpace: 'nowrap',
+            // Preserve button contrast when WordPress applies anchor interaction colors.
+            '&&:hover, &&:focus, &&:active': {
+                color: color === 'secondary' ? '#fff' : color === 'inherit' ? 'inherit' : 'var(--variant-containedColor)',
+            },
+        },
         ...(color === 'secondary' ? [secondaryContainedSx] : []),
         ...callerSx,
     ];

@@ -1,3 +1,7 @@
+/**
+ * Standard Store Locator Plus action button.
+ * Version: 2610.14.01
+ */
 import React from 'react';
 import Button, { type ButtonProps } from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
@@ -45,7 +49,13 @@ export const SLPStandardButton: React.FC<SLPStandardButtonProps> = ({
             ? [sx as SxEntry]
             : [];
     const buttonSx: SxProps<Theme> = [
-        { whiteSpace: 'nowrap' },
+        {
+            whiteSpace: 'nowrap',
+            // Preserve button contrast when WordPress applies anchor interaction colors.
+            '&&:hover, &&:focus, &&:active': {
+                color: color === 'secondary' ? '#fff' : color === 'inherit' ? 'inherit' : 'var(--variant-containedColor)',
+            },
+        },
         ...(color === 'secondary' ? [secondaryContainedSx] : []),
         ...callerSx,
     ];

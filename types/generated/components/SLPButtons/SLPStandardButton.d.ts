@@ -1,3 +1,7 @@
+/**
+ * Standard Store Locator Plus action button.
+ * Version: 2610.14.01
+ */
 import React from 'react';
 import { type ButtonProps } from '@mui/material/Button';
 import type { SxProps, Theme } from '@mui/material/styles';
