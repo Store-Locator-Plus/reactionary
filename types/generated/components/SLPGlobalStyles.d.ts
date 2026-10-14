@@ -1,3 +1,7 @@
+/**
+ * Shared styles for Store Locator Plus React components.
+ * Version: 2610.14.01
+ */
 import React from 'react';
 /**
  * Global styles for Store Locator Plus custom components.

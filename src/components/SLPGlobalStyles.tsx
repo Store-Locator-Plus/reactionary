@@ -1,3 +1,7 @@
+/**
+ * Shared styles for Store Locator Plus React components.
+ * Version: 2610.14.01
+ */
 import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
@@ -11,6 +15,27 @@ const SLPGlobalStyles: React.FC = () => (
         <CssBaseline />
         <GlobalStyles
             styles={{
+                // Let MUI's notched outline own the border instead of WordPress's native input styles.
+                '.MuiOutlinedInput-root input.MuiOutlinedInput-input': {
+                    border: 0,
+                    boxShadow: 'none',
+                    backgroundColor: 'transparent',
+                    minHeight: 0,
+                    padding: '16.5px 14px',
+                },
+                '.MuiOutlinedInput-root input.MuiOutlinedInput-input:focus': {
+                    boxShadow: 'none',
+                    outline: 0,
+                },
+                '.MuiOutlinedInput-root.MuiInputBase-sizeSmall input.MuiOutlinedInput-input': {
+                    padding: '8.5px 14px',
+                },
+                '.MuiOutlinedInput-root.MuiInputBase-adornedStart input.MuiOutlinedInput-input': {
+                    paddingLeft: 0,
+                },
+                '.MuiOutlinedInput-root.MuiInputBase-adornedEnd input.MuiOutlinedInput-input': {
+                    paddingRight: 0,
+                },
                 '.MuiAccordionSummary-root': {
                     backgroundColor: 'lightgray',
                     transition: 'background-color 0.3s ease',

@@ -6,6 +6,27 @@ import GlobalStyles from '@mui/material/GlobalStyles';
  * Uses Material UI CssBaseline to reset CSS.
  */
 const SLPGlobalStyles = () => (_jsxs(_Fragment, { children: [_jsx(CssBaseline, {}), _jsx(GlobalStyles, { styles: {
+                // Let MUI's notched outline own the border instead of WordPress's native input styles.
+                '.MuiOutlinedInput-root input.MuiOutlinedInput-input': {
+                    border: 0,
+                    boxShadow: 'none',
+                    backgroundColor: 'transparent',
+                    minHeight: 0,
+                    padding: '16.5px 14px',
+                },
+                '.MuiOutlinedInput-root input.MuiOutlinedInput-input:focus': {
+                    boxShadow: 'none',
+                    outline: 0,
+                },
+                '.MuiOutlinedInput-root.MuiInputBase-sizeSmall input.MuiOutlinedInput-input': {
+                    padding: '8.5px 14px',
+                },
+                '.MuiOutlinedInput-root.MuiInputBase-adornedStart input.MuiOutlinedInput-input': {
+                    paddingLeft: 0,
+                },
+                '.MuiOutlinedInput-root.MuiInputBase-adornedEnd input.MuiOutlinedInput-input': {
+                    paddingRight: 0,
+                },
                 '.MuiAccordionSummary-root': {
                     backgroundColor: 'lightgray',
                     transition: 'background-color 0.3s ease',
