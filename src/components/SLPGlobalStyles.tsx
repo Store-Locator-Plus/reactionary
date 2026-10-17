@@ -1,6 +1,6 @@
 /**
  * Shared styles for Store Locator Plus React components.
- * Version: 2610.14.01
+ * Version: 2610.16.01
  */
 import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -60,6 +60,14 @@ const SLPGlobalStyles: React.FC = () => (
                     backgroundColor: '#ffffff',
                     border: '1px solid #cccccc',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)',
+                },
+                // Ensure MUI Select dropdown arrow is properly styled without double icons
+                '.MuiSelect-icon': {
+                    right: '8px',
+                    zIndex: 1,
+                },
+                '.MuiSelect-iconOpen': {
+                    transform: 'rotate(180deg)',
                 },
             }}
         />
