@@ -1,1 +1,1 @@
-{"version":3,"file":"SLPGlobalStyles.d.ts","sourceRoot":"","sources":["../../../src/components/SLPGlobalStyles.tsx"],"names":[],"mappings":"AAAA;;;GAGG;AACH,OAAO,KAAK,MAAM,OAAO,CAAC;AAI1B;;;GAGG;AACH,QAAA,MAAM,eAAe,EAAE,KAAK,CAAC,EAsD5B,CAAC;AAEF,eAAe,eAAe,CAAC"}
+{"version":3,"file":"SLPGlobalStyles.d.ts","sourceRoot":"","sources":["../../../src/components/SLPGlobalStyles.tsx"],"names":[],"mappings":"AAAA;;;GAGG;AACH,OAAO,KAAK,MAAM,OAAO,CAAC;AAK1B;;;GAGG;AACH,QAAA,MAAM,eAAe,EAAE,KAAK,CAAC,EA8D5B,CAAC;AAEF,eAAe,eAAe,CAAC"}

@@ -1,8 +1,9 @@
 /**
  * Shared styles for Store Locator Plus React components.
- * Version: 2610.16.01
+ * Version: 2610.20.01
  */
 import React from 'react';
+import { SLP_BRAND_PALETTE } from '../SLPBrandPalette';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
 
@@ -37,17 +38,17 @@ const SLPGlobalStyles: React.FC = () => (
                     paddingRight: 0,
                 },
                 '.MuiAccordionSummary-root': {
-                    backgroundColor: 'lightgray',
+                    backgroundColor: SLP_BRAND_PALETTE.blush,
                     transition: 'background-color 0.3s ease',
                 },
                 '.MuiAccordionSummary-root.Mui-expanded': {
-                    backgroundColor: 'lightgray !important',
+                    backgroundColor: `${SLP_BRAND_PALETTE.blush} !important`,
                 },
                 '.MuiAccordionSummary-root:not(.Mui-expanded)': {
-                    backgroundColor: 'lightgray !important',
+                    backgroundColor: `${SLP_BRAND_PALETTE.blush} !important`,
                 },
                 '.MuiAccordionSummary-root:hover': {
-                    backgroundColor: 'gray',
+                    backgroundColor: SLP_BRAND_PALETTE.blush,
                 },
                 '.MuiToolbar-root': {
                     minHeight: 'inherit',

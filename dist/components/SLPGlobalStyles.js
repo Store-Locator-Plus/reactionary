@@ -1,4 +1,5 @@
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
+import { SLP_BRAND_PALETTE } from '../SLPBrandPalette';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
 /**
@@ -28,17 +29,17 @@ const SLPGlobalStyles = () => (_jsxs(_Fragment, { children: [_jsx(CssBaseline, {
                     paddingRight: 0,
                 },
                 '.MuiAccordionSummary-root': {
-                    backgroundColor: 'lightgray',
+                    backgroundColor: SLP_BRAND_PALETTE.blush,
                     transition: 'background-color 0.3s ease',
                 },
                 '.MuiAccordionSummary-root.Mui-expanded': {
-                    backgroundColor: 'lightgray !important',
+                    backgroundColor: `${SLP_BRAND_PALETTE.blush} !important`,
                 },
                 '.MuiAccordionSummary-root:not(.Mui-expanded)': {
-                    backgroundColor: 'lightgray !important',
+                    backgroundColor: `${SLP_BRAND_PALETTE.blush} !important`,
                 },
                 '.MuiAccordionSummary-root:hover': {
-                    backgroundColor: 'gray',
+                    backgroundColor: SLP_BRAND_PALETTE.blush,
                 },
                 '.MuiToolbar-root': {
                     minHeight: 'inherit',
@@ -51,6 +52,14 @@ const SLPGlobalStyles = () => (_jsxs(_Fragment, { children: [_jsx(CssBaseline, {
                     backgroundColor: '#ffffff',
                     border: '1px solid #cccccc',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)',
+                },
+                // Ensure MUI Select dropdown arrow is properly styled without double icons
+                '.MuiSelect-icon': {
+                    right: '8px',
+                    zIndex: 1,
+                },
+                '.MuiSelect-iconOpen': {
+                    transform: 'rotate(180deg)',
                 },
             } })] }));
 export default SLPGlobalStyles;

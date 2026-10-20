@@ -1,15 +1,35 @@
+/**
+ * Shared Store Locator Plus Material UI theme.
+ * Version: 2610.20.01
+ */
 import React from 'react';
+import { SLP_BRAND_PALETTE } from '../SLPBrandPalette';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import type { ThemeOptions } from '@mui/material/styles';
+import { green } from '@mui/material/colors';
 
 /**
  * SLP Color Palette Configuration
- * Secondary color matches SLP brand color: #ED6D03
+ * Blue primary actions, red secondary actions, and supporting brand colors.
  */
 const slpThemeOptions: ThemeOptions = {
     palette: {
+        primary: {
+            main: SLP_BRAND_PALETTE.blue,
+        },
         secondary: {
-            main: '#ED6D03',
+            main: SLP_BRAND_PALETTE.red,
+        },
+        error: {
+            main: SLP_BRAND_PALETTE.red,
+            light: SLP_BRAND_PALETTE.blush,
+        },
+        warning: {
+            main: SLP_BRAND_PALETTE.gold,
+        },
+        success: {
+            main: green[800],
+            light: SLP_BRAND_PALETTE.mint,
         },
     },
 };

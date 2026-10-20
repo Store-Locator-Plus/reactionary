@@ -1,3 +1,8 @@
+/**
+ * Public Store Locator Plus component and palette exports.
+ * Version: 2610.20.01
+ */
+export { SLP_BRAND_PALETTE } from './SLPBrandPalette';
 export { AdminHeader } from './components/AdminHeader';
 export { ExpandableCardPanel } from './components/ExpandableCardPanel';
 export { default as SLPGlobalStyles } from './components/SLPGlobalStyles';
@@ -10,7 +15,7 @@ export {
     SLPDeleteButton,
     SLPFilterButton,
 } from './components/SLPButtons';
-export { SLPThemeProvider } from './components/SLPTheme';
+export { SLPThemeProvider, slpTheme } from './components/SLPTheme';
 export type {
     SLPButtonStyle,
     SLPStandardButtonProps,

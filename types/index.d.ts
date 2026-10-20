@@ -23,3 +23,7 @@ export type {
     SLPDeleteButtonProps,
     SLPFilterButtonProps,
 } from './generated/components/SLPButtons';
+
+export { SLP_BRAND_PALETTE } from './generated/SLPBrandPalette';
+export { SLPThemeProvider, slpTheme } from './generated/components/SLPTheme';
+export type { SLPThemeProviderProps } from './generated/components/SLPTheme';

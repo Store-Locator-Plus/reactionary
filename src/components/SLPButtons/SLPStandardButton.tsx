@@ -1,11 +1,12 @@
 /**
  * Standard Store Locator Plus action button.
- * Version: 2610.14.01
+ * Version: 2610.20.01
  */
 import React from 'react';
+import { SLP_BRAND_PALETTE } from '../../SLPBrandPalette';
 import Button, { type ButtonProps } from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import type { SxProps, Theme } from '@mui/material/styles';
+import { darken, type SxProps, type Theme } from '@mui/material/styles';
 import type { SystemStyleObject } from '@mui/system';
 
 export type SLPButtonStyle = 'full' | 'icon';
@@ -25,9 +26,9 @@ export type SLPStandardButtonProps = Omit<
 
 const secondaryContainedSx: SystemStyleObject<Theme> = {
     color: '#fff',
-    backgroundColor: '#ED6D03',
+    backgroundColor: SLP_BRAND_PALETTE.red,
     '&:hover': {
-        backgroundColor: '#d45903',
+        backgroundColor: darken(SLP_BRAND_PALETTE.red, 0.2),
     },
 };
 

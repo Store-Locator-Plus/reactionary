@@ -1,10 +1,10 @@
 /**
  * Standard Store Locator Plus action button.
- * Version: 2610.14.01
+ * Version: 2610.20.01
  */
 import React from 'react';
 import { type ButtonProps } from '@mui/material/Button';
-import type { SxProps, Theme } from '@mui/material/styles';
+import { type SxProps, type Theme } from '@mui/material/styles';
 export type SLPButtonStyle = 'full' | 'icon';
 export type SLPStandardButtonProps = Omit<ButtonProps, 'endIcon' | 'startIcon' | 'style' | 'sx' | 'variant'> & {
     /** Full shows the icon and label; icon shows only the icon. */

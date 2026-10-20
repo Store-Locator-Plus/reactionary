@@ -10,13 +10,15 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
+import { SLP_BRAND_PALETTE } from '../../SLPBrandPalette';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
+import { darken } from '@mui/material/styles';
 const secondaryContainedSx = {
     color: '#fff',
-    backgroundColor: '#ED6D03',
+    backgroundColor: SLP_BRAND_PALETTE.red,
     '&:hover': {
-        backgroundColor: '#d45903',
+        backgroundColor: darken(SLP_BRAND_PALETTE.red, 0.2),
     },
 };
 /** A consistently styled contained action button for Store Locator Plus interfaces. */
