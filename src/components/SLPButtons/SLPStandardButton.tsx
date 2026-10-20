@@ -1,6 +1,6 @@
 /**
  * Standard Store Locator Plus action button.
- * Version: 2610.20.01
+ * Version: 2610.20.02
  */
 import React from 'react';
 import { SLP_BRAND_PALETTE } from '../../SLPBrandPalette';
@@ -25,10 +25,10 @@ export type SLPStandardButtonProps = Omit<
 };
 
 const secondaryContainedSx: SystemStyleObject<Theme> = {
-    color: '#fff',
-    backgroundColor: SLP_BRAND_PALETTE.red,
+    color: '#000',
+    backgroundColor: SLP_BRAND_PALETTE.gold,
     '&:hover': {
-        backgroundColor: darken(SLP_BRAND_PALETTE.red, 0.2),
+        backgroundColor: darken(SLP_BRAND_PALETTE.gold, 0.2),
     },
 };
 
@@ -54,7 +54,7 @@ export const SLPStandardButton: React.FC<SLPStandardButtonProps> = ({
             whiteSpace: 'nowrap',
             // Preserve button contrast when WordPress applies anchor interaction colors.
             '&&:hover, &&:focus, &&:active': {
-                color: color === 'secondary' ? '#fff' : color === 'inherit' ? 'inherit' : 'var(--variant-containedColor)',
+                color: color === 'secondary' ? '#000' : color === 'inherit' ? 'inherit' : 'var(--variant-containedColor)',
             },
         },
         ...(color === 'secondary' ? [secondaryContainedSx] : []),

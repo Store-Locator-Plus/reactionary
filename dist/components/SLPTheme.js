@@ -4,7 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { green } from '@mui/material/colors';
 /**
  * SLP Color Palette Configuration
- * Blue primary actions, red secondary actions, and supporting brand colors.
+ * Blue primary actions, gold secondary actions, and supporting brand colors.
  */
 const slpThemeOptions = {
     palette: {
@@ -12,7 +12,8 @@ const slpThemeOptions = {
             main: SLP_BRAND_PALETTE.blue,
         },
         secondary: {
-            main: SLP_BRAND_PALETTE.red,
+            main: SLP_BRAND_PALETTE.gold,
+            contrastText: '#000',
         },
         error: {
             main: SLP_BRAND_PALETTE.red,

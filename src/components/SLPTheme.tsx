@@ -1,6 +1,6 @@
 /**
  * Shared Store Locator Plus Material UI theme.
- * Version: 2610.20.01
+ * Version: 2610.20.02
  */
 import React from 'react';
 import { SLP_BRAND_PALETTE } from '../SLPBrandPalette';
@@ -10,7 +10,7 @@ import { green } from '@mui/material/colors';
 
 /**
  * SLP Color Palette Configuration
- * Blue primary actions, red secondary actions, and supporting brand colors.
+ * Blue primary actions, gold secondary actions, and supporting brand colors.
  */
 const slpThemeOptions: ThemeOptions = {
     palette: {
@@ -18,7 +18,8 @@ const slpThemeOptions: ThemeOptions = {
             main: SLP_BRAND_PALETTE.blue,
         },
         secondary: {
-            main: SLP_BRAND_PALETTE.red,
+            main: SLP_BRAND_PALETTE.gold,
+            contrastText: '#000',
         },
         error: {
             main: SLP_BRAND_PALETTE.red,

@@ -1,6 +1,6 @@
 /**
  * Shared Store Locator Plus Material UI theme.
- * Version: 2610.20.01
+ * Version: 2610.20.02
  */
 import React from 'react';
 export declare const slpTheme: import("@mui/material/styles").Theme;

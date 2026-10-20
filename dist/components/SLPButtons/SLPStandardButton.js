@@ -15,10 +15,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import { darken } from '@mui/material/styles';
 const secondaryContainedSx = {
-    color: '#fff',
-    backgroundColor: SLP_BRAND_PALETTE.red,
+    color: '#000',
+    backgroundColor: SLP_BRAND_PALETTE.gold,
     '&:hover': {
-        backgroundColor: darken(SLP_BRAND_PALETTE.red, 0.2),
+        backgroundColor: darken(SLP_BRAND_PALETTE.gold, 0.2),
     },
 };
 /** A consistently styled contained action button for Store Locator Plus interfaces. */
@@ -36,7 +36,7 @@ export const SLPStandardButton = (_a) => {
             whiteSpace: 'nowrap',
             // Preserve button contrast when WordPress applies anchor interaction colors.
             '&&:hover, &&:focus, &&:active': {
-                color: color === 'secondary' ? '#fff' : color === 'inherit' ? 'inherit' : 'var(--variant-containedColor)',
+                color: color === 'secondary' ? '#000' : color === 'inherit' ? 'inherit' : 'var(--variant-containedColor)',
             },
         },
         ...(color === 'secondary' ? [secondaryContainedSx] : []),
