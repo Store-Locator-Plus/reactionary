@@ -1,1 +1,1 @@
-{"version":3,"file":"SLPBrandPalette.js","sourceRoot":"","sources":["../src/SLPBrandPalette.ts"],"names":[],"mappings":"AAAA;;;GAGG;AACH,MAAM,CAAC,MAAM,iBAAiB,GAAG;IAC7B,GAAG,EAAE,SAAS;IACd,KAAK,EAAE,SAAS;IAChB,IAAI,EAAE,SAAS;IACf,IAAI,EAAE,SAAS;IACf,IAAI,EAAE,SAAS;CACT,CAAC"}
+{"version":3,"file":"SLPBrandPalette.js","sourceRoot":"","sources":["../src/SLPBrandPalette.ts"],"names":[],"mappings":"AAAA;;;GAGG;AACH,MAAM,CAAC,MAAM,iBAAiB,GAAG;IAC7B,GAAG,EAAE,SAAS;IACd,KAAK,EAAE,SAAS;IAChB,IAAI,EAAE,SAAS;IACf,IAAI,EAAE,SAAS;IACf,IAAI,EAAE,SAAS;IACf,QAAQ,EAAE,SAAS;CACb,CAAC"}
