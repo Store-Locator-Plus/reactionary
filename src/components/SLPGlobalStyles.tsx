@@ -57,7 +57,7 @@ const SLPGlobalStyles: React.FC = () => (
                     outline: 'none !important',
                     boxShadow: 'none !important',
                 },
-                '.MuiMenu-root .MuiPaper-root': {
+                '.MuiMenu-root .MuiPaper-root, .MuiDataGrid-menu .MuiPaper-root': {
                     backgroundColor: '#ffffff',
                     border: '1px solid #cccccc',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)',
