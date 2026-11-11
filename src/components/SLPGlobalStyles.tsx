@@ -1,6 +1,6 @@
 /**
  * Shared styles for Store Locator Plus React components.
- * Version: 2610.20.01
+ * Version: 2611.10.01
  */
 import React from 'react';
 import { SLP_BRAND_PALETTE } from '../SLPBrandPalette';
@@ -57,7 +57,7 @@ const SLPGlobalStyles: React.FC = () => (
                     outline: 'none !important',
                     boxShadow: 'none !important',
                 },
-                '.MuiMenu-root .MuiPaper-root, .MuiDataGrid-menu .MuiPaper-root': {
+                '.MuiMenu-root .MuiPaper-root, .MuiDataGrid-menu .MuiPaper-root, .MuiDataGrid-menuList': {
                     backgroundColor: '#ffffff',
                     border: '1px solid #cccccc',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)',
