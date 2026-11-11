@@ -1,6 +1,6 @@
 /**
  * Shared styles for Store Locator Plus React components.
- * Version: 2611.10.01
+ * Version: 2611.10.02
  */
 import React from 'react';
 import { SLP_BRAND_PALETTE } from '../SLPBrandPalette';
@@ -57,7 +57,8 @@ const SLPGlobalStyles: React.FC = () => (
                     outline: 'none !important',
                     boxShadow: 'none !important',
                 },
-                '.MuiMenu-root .MuiPaper-root, .MuiDataGrid-menu .MuiPaper-root, .MuiDataGrid-menuList': {
+                // Custom DataGrid poppers can omit the Paper surface used by MUI's default popper.
+                '.MuiMenu-root .MuiPaper-root, .MuiDataGrid-menu .MuiPaper-root, .MuiDataGrid-menu:not(:has(.MuiPaper-root))': {
                     backgroundColor: '#ffffff',
                     border: '1px solid #cccccc',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)',
